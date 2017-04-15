@@ -10,13 +10,16 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
 
-    var emoji = "No Emoji"
-    @IBOutlet weak var EmojiLabel: UILabel!
-    @IBOutlet weak var DefinitionLabel: UILabel!
+    var emoji = "No Emoji" //Placeholder for the emoji value
+    @IBOutlet weak var EmojiLabel: UILabel! //Large Emoji on Definition page
+    @IBOutlet weak var DefinitionLabel: UILabel! //Definition goes here
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set the emoji label as the selected one and then based on that emoji, display the appropriate definition.
+        // I'm no emoji expert...
+        
         EmojiLabel.text = emoji
-        // Do any additional setup after loading the view.
         if EmojiLabel.text == "😀" {
             DefinitionLabel.text = "The classic Smiley."
         } else if EmojiLabel.text == "😈"{
